@@ -1,14 +1,11 @@
 <?php
 
-$servername = "localhost";
+$servername = "db";
 $dbname = "kullanicilar";
-$username = "root";
-$password = "";
+$username = "kaan_docker";
+$password = "123";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn=mysqli_connect($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Baglanti hatasi: " . $conn->connect_error);
-}
-else{
-    echo"Baglanti basarili";
 }

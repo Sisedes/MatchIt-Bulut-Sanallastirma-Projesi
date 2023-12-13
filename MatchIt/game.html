@@ -172,7 +172,7 @@ const matrixGenerator = (cardValues, size = 4) => {
             if (winCount == Math.floor(cardValues.length / 2)) {
               result.innerHTML = `<h2>Kazandın</h2>
               <h4 id="hamle" name="hamle">Hamle Sayısı: ${movesCount}</h4>
-              <button onclick="acilacakSayfayiAc()">Lider Tablosu</button>
+              <button >Lider Tablosu</button>
               <br>`;
               document.getElementById("resultInput").value = movesCount;
               let sure= totalTime;
@@ -233,10 +233,7 @@ const initializer = () => {
   matrixGenerator(cardValues);
 };
 
-function acilacakSayfayiAc() {
-            window.open('liderTablo.php');
 
-        }
     </script>
   </body>
 </html>

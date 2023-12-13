@@ -42,11 +42,10 @@ $sql = "INSERT INTO kayitli (eposta, password_hash, kullanici_adi) VALUES ('$mai
 if ($conn->query($sql) === TRUE) {
     $_SESSION['kullanici_adi'] = $kullaniciAd; // Kullanıcı adını session'a kaydet
     $_SESSION['kullanici_eposta'] = $mail; // E-postayı session'a kaydet
-    echo"<br>";
-    echo "Veri başarıyla eklendi";
+    
     header("Location:game.html");
 } else {
-    echo "Hata: " . $sql . "<br>" . $conn->error;
+    
     if ($conn->errno === 1062) {
         header("Location:kayit-giris.html");
         die("Bu eposta kullanılıyor.");

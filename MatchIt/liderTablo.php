@@ -24,17 +24,21 @@
     <thead>
         <tr>
             <th>Sıra</th>
-            <th>Kullanıcı ID</th>
+            <th>Kullanıcı Adı</th>
             <th>Hamle</th>
             <th>Süre</th>
         </tr>
     </thead>
     <tbody>
         <?php
-       require_once('database.php');
+        require_once('database.php');
 
         // SQL sorgusu - leaderboard tablosundan verileri çek
-        $sql = "SELECT kullanici_id, hamle, sure FROM leaderboard ORDER BY sure ASC, hamle ASC";
+        $sql = "SELECT kayitli.kullanici_adi, leaderboard.hamle, leaderboard.sure 
+        FROM leaderboard  
+        INNER JOIN kayitli ON kayitli.kullanici_id = leaderboard.kullanici_id
+        ORDER BY leaderboard.sure ASC, leaderboard.hamle ASC";
+
 
         $result = $conn->query($sql);
 
@@ -43,17 +47,17 @@
             $rank = 1;
 
             // Verileri döngü ile al ve tabloya ekle
-            while ($row = $result->fetch_assoc()) {
-                echo "<tr>";
-                echo "<td>" . $rank++ . "</td>";
-                echo "<td>" . $row["kullanici_id"] . "</td>";
-                echo "<td>" . $row["hamle"] . "</td>";
-                echo "<td>" . $row["sure"] . "</td>";
-                echo "</tr>";
-            }
-        } else {
-            echo "<tr><td colspan='4'>Tabloda veri bulunamadı</td></tr>";
-        }
+            while ($row = $result->fetch_assoc()): ?>
+                <tr>
+                    <td><?= $rank++ ?></td>
+                    <td><?= $row["kullanici_adi"] ?></td>
+                    <td><?= $row["hamle"] ?></td>
+                    <td><?= $row["sure"] ?></td>
+                </tr>
+            <?php endwhile;
+        } else { ?>
+            <tr><td colspan='4'>Tabloda veri bulunamadı</td></tr>
+        <?php }
         $conn->close();
         ?>
     </tbody>
