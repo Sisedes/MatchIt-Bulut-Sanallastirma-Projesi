@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login & Registration Form</title>
+  <!---Custom CSS File--->
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <div class="container">
+    <input type="checkbox" id="check">
+    <div class="login form">
+      <header>Giriş Yap</header>
+      <form action="giris.php"method="post">
+        <input type="text" id="emailG" name="emailG" placeholder="E-posta adresi giriniz">
+        <input type="password" id="passwordG" name="passwordG" placeholder="Şifre giriniz">
+        <a href="#">Şifremi unuttum.</a>
+        <button class="formButton">Giriş Yap</button>
+      </form>
+      <div class="signup">
+        <span class="signup">Hesabın yok mu?
+         <label for="check">Kayıt Ol</label>
+        </span>
+      </div>
+    </div>
+
+    <div class="registration form">
+      <header>Kayıt Ol</header>
+      <form action="kayit.php" method="post" >
+        <input type="text" id="emailK" name="emailK" placeholder="E-posta adresi giriniz">
+        <input type="name" id="nameK" name="nameK" placeholder="Kullanıcı adı giriniz">
+        <input type="password"id="passwordK" name="passwordK" placeholder="Şifre giriniz">
+        
+        <input type="password"id="password_confirmationK" name="password_confirmationK" placeholder="Şifreyi tekrar giriniz">
+        
+        <button class="formButton">Kayıt Ol</button>
+    </form>
+      <div class="signup">
+        <span class="signup">Hesabın var mı?
+         <label for="check">Giriş Yap</label>
+        </span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
