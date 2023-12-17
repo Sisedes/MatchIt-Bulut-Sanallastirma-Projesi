@@ -9,7 +9,7 @@
 body{
   min-height: 100vh;
   width: 100%;
-  background: #f4c531;
+  background: darkviolet;
 }
 .container{
   position: absolute;
@@ -58,7 +58,7 @@ body{
  }
 .form a{
   font-size: 16px;
-  color: #f4c531;
+  color: darkviolet;
   text-decoration: none;
 }
 .form a:hover{
@@ -66,7 +66,7 @@ body{
 }
 .form input.button{
   color: #fff;
-  background: #f4c531;
+  background: darkviolet;
   font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 1px;
@@ -80,7 +80,7 @@ body{
 
 .formButton{
     color: #fff;
-    background: #f4c531;
+    background: darkviolet;
     font-size: 1.2rem;
     font-weight: 500;
     letter-spacing: 1px;
@@ -106,7 +106,7 @@ body{
   text-align: center;
 }
 .signup label{
-  color: #f4c531;
+  color: darkviolet;
   cursor: pointer;
 }
 .signup label:hover{

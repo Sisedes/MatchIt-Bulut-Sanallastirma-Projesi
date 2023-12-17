@@ -46,19 +46,73 @@ if (mysqli_num_rows($result) > 0) {
 <head>
     <title>Leaderboard</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #340068; /* DarkViolet rengi */
+            color: #ffffff; /* Beyaz metin rengi */
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #bb86fc; /* LightViolet tonu */
+        }
+
         table {
-            border-collapse: collapse;
-            width: 50%;
+            width: 70%;
             margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background-color: #3a0074; /* DarkViolet tonlarından */
+            color: #ffffff; /* Beyaz metin rengi */
         }
+
         th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
+            padding: 12px 15px;
             text-align: left;
+            border-bottom: 1px solid #5f1797; /* DarkViolet tonlarından */
         }
+
         th {
-            background-color: #f2f2f2;
+            background-color: #4f0caa; /* DarkViolet tonlarından */
+            color: #ffffff; /* Beyaz metin rengi */
+            text-transform: uppercase;
+            font-size: 14px;
         }
+
+        tbody tr:hover {
+            background-color: #421083; /* DarkViolet tonlarından */
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #330058; /* DarkViolet tonlarından */
+        }
+
+        tbody td {
+            font-size: 14px;
+        }
+
+        .button-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Düğme genişliğini ayarlayabilirsiniz */
+    gap: 5px; /* İstediğiniz boşluk ayarını yapabilirsiniz */
+    justify-content: center;
+}
+
+.custom-button {
+    border: none;
+    border-radius: 0.3em;
+    padding: 1em 1.5em;
+    cursor: pointer;
+    background-color: darkviolet;
+    color: whitesmoke;
+}
+
+
+</style>
+
     </style>
 </head>
 <body>
@@ -104,6 +158,31 @@ if (mysqli_num_rows($result) > 0) {
         ?>
     </tbody>
 </table>
+
+<br>
+<div class="button-container">
+    <button onclick="redirectToPage()" class="custom-button">Ana Sayfaya Git</button>
+    <button onclick="redirectToPage2()" class="custom-button">Oyuna Dön</button>
+</div>
+
+
+<script>
+    function redirectToPage() {
+    // Yönlendirme yapılacak URL
+    let redirectTo = 'index.html';
+
+    // Yönlendirme işlemi
+    window.location.href = redirectTo;
+  }
+  function redirectToPage2() {
+    // Yönlendirme yapılacak URL
+    let redirectTo = 'game.html';
+
+    // Yönlendirme işlemi
+    window.location.href = redirectTo;
+  }
+</script>
+
 
 </body>
 </html>
