@@ -20,6 +20,5 @@ Bu proje, otizmli çocukların gelişimine katkı sağlamak ve farkındalık olu
   - Amazon Web Servisleri (AWS)
   - Docker konteynerleri ve resimleri kullanılarak yayına alınmıştır.
     
-## Nasıl Çalıştırılır
-Projenin docker konteynerleri ve resimleri için: https://hub.docker.com/repository/docker/sisedes/matchit/general
-Projenin bulut sunucusu: http://16.171.176.9/
+## Projenin docker konteynerleri ve resimleri için: https://hub.docker.com/repository/docker/sisedes/matchit/general
+## Projenin bulut sunucusu: http://16.171.176.9/
